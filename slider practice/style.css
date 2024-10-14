@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+  }
+  
+  .slider {
+    width: 80vw;
+    overflow: hidden;
+    border: 2px solid #ccc;
+    position: relative;
+  }
+  
+  .slider-track {
+    display: flex;
+    width: calc(200% + 10px); 
+    animation: slide 500s linear infinite;
+  }
+  
+  .box {
+    flex: 1;
+    min-width: 20%;
+    height: 200px;
+    margin: 0 5px;
+    background-color: #3498db;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
